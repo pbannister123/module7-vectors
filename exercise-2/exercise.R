@@ -1,35 +1,29 @@
-# Exercise 2: Subsetting and Manipulating Vectors
+# Exercise 1: writing and executing functions
 
-# Create a vector `x` that contains the numbers 5,2,6,2,1,7
+# Define a function `AddThree` that takes a single argument and
+# returns a value 3 greater than that input
 
-x <- c(5, 2, 6, 2, 1, 7)
+AddThree <- function(number) {}
+  newNumber <- number + 3
+  return(newNumber)
+}  
 
-# Create a vector `y` that contains the numbers 2,3
 
-y <- c(2,3)
+# Create a variable `ten` that is the result of passing 7 to your `AddThree` function
+ten <- AddThree(7)
 
-# Create a vector `z` by adding (not combining, but adding) `x` and `y` (note the recycling!)
+# Define a function `ImperialToMetric` that takes in two arguments: a number of feet
+# and a number of inches
+# The function should return the total length in meters
+ImperialToMetric <- function(feet, inches) {}
+  feet.to.inches <- (feet * 12) + inches
+  meters <- (feet.to.inches / 12) * 0.3048
+  return(meters)
+}
 
-z <- x + y
 
-# Create a vector `first.three` that has the first three elements of `z` in it
+# Create a variable `height.in.meters` by passing your height in imperial to the
+# `ImperialToMetric` function
+height.in.meters <- ImperialToMetric(5, 10)
 
-first.three <- z[1:3]
 
-# Create a vector `small` that has the values of `z` that are less than 5
-
-small <- z[z < 5]
-
-# Create a vector `large` that has the values of `z` that are greater than or equal to 5
-
-large <- z[z > 5]
-
-### Bonus ###
-
-# Replace the values in `z` that are larger than 5 with the number 5
-
-z <- replace(z, z > 5, 5)
-
-# Replace every other value in `z` with the number 0
-
-z <- replace(z, z < 5, 0)
